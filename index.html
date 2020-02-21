@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Github Page demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="index.js"></script>
+</head>
+
+
+<body>
+    <div id="main-content"></div>
+
+    <p><a href="https://haitongzhang.github.io/CS-TTS/">Clip here to read the paper!</a></p>
+
+    <p><b>Abstract:</b></p>
+    <p>Recently, sequence-to-sequence-based models have been successfully applied in text-to-speech (TTS) to synthesize speech for single-language text.
+        To synthesize speech for code-switch text usually requires multi-lingual speech from the target speaker.
+        However, it is hard to collect these data.
+        In this paper, we investigate transfer learning for code-switch TTS,
+        where we utilize code-switch speech from Automatic Speech Recognition (ASR) in TTS to synthesize code-switch speech for our target speaker.
+        As a result, our proposed methods enable to generate better code-switch speech for the target speaker in terms of naturalness and speaker consistency.
+        To further investigate the effect of transcription of the code-switch speech, we propose two ways of transfer learning.
+        We found that even without transcription, semi-supervised pre-training also helps improving the model performance,
+        which opens the door of getting full usage of publicly-found code-switch speech.</p>
+
+    <p><strong><mark>Note:</mark></strong></p>
+    <p>Here, we presents the synthesized code-switch speech by all the model variants in the paper.
+        All of the utterances are unseen in training and development.
+        We use Griffin-Lim to convert the predicted spectrogram into wavform for fast experiment cycles.
+
+        We group the code-switch text into two groups: (1) those begins with Mandarin (2) those begins with English.
+        We provide the speech demos for two groups.</p>
+
+    <p><strong><mark>System investigated in the paper:</mark></strong></p>
+
+    <p><strong>Tac:</strong> the model trained with only mono-lingual speech data from two female speakers; </p>
+    <p><strong>Pre1:</strong> the model which is pre-trained with only code-switch speech in a semi-supervised mode,
+        then fine-tuned with mono-lingual speech data from two female speakers; </p>
+    <p><strong>Pre2:</strong> the model which is pre-trained with code-switch text-speech pairs,
+        then fine-tuned with mono-lingual speech data from two female speakers; </p>
+    <p><strong>Mix:</strong> the  model  trained  with  mixture  of  code-switch  text-speech pairs
+        and mono-lingual speech data from two female speakers </p>
+
+
+    <p><b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Tac
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Pre1
+        &nbsp &nbsp &nbsp &nbsp    Pre2
+        &nbsp &nbsp &nbsp &nbsp    Mix</b></p>
+
+
+    <p><i>Text: "阅读和写作是保证脑部的input和output。"</i></p>
+
+
+    <p><strong>Chinese Speaker:</strong></p>
+    <audio controls>
+    <source src="wavs/ch/baseline/type1/ch_baseline_type1_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/pre1/type1/ch_pre1_type1_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/pre2/type1/ch_pre2_type1_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/mix/type1/ch_mix_type1_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <p><strong>English Speaker:</strong></p>
+    <audio controls>
+    <source src="wavs/en/baseline/type1/en_baseline_type1_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/pre1/type1/en_pre1_type1_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/pre2/type1/en_pre2_type1_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/mix/type1/en_mix_type1_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+
+    <p><i>Text: "阿果很喜欢emotion和devotion这组意象。"</i></p>
+
+    <p><strong>Chinese Speaker:</strong></p>
+    <audio controls>
+    <source src="wavs/ch/baseline/type1/ch_baseline_type1_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/pre1/type1/ch_pre1_type1_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/pre2/type1/ch_pre2_type1_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/mix/type1/ch_mix_type1_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+
+    <p><strong>English Speaker:</strong></p>
+    <audio controls>
+    <source src="wavs/en/baseline/type1/en_baseline_type1_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/pre1/type1/en_pre1_type1_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/pre2/type1/en_pre2_type1_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/mix/type1/en_mix_type1_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+
+
+
+
+    <p><i>Text: "Hamburger menu的替代方案。"</i></p>
+
+
+    <p><strong>Chinese Speaker:</strong></p>
+    <audio controls>
+    <source src="wavs/ch/baseline/type2/ch_baseline_type2_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/pre1/type2/ch_pre1_type2_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/pre2/type2/ch_pre2_type2_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/mix/type2/ch_mix_type2_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <p><strong>English Speaker:</strong></p>
+    <audio controls>
+    <source src="wavs/en/baseline/type2/en_baseline_type2_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/pre1/type2/en_pre1_type2_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/pre2/type2/en_pre2_type2_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/mix/type2/en_mix_type2_0.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+
+    <p><i>Text: "Intellectual curiosity大概是最珍贵的品质。"</i></p>
+
+    <p><strong>Chinese Speaker:</strong></p>
+    <audio controls>
+    <source src="wavs/ch/baseline/type2/ch_baseline_type2_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/pre1/type2/ch_pre1_type2_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/pre2/type2/ch_pre2_type2_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/ch/mix/type2/ch_mix_type2_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+
+    <p><strong>English Speaker:</strong></p>
+    <audio controls>
+    <source src="wavs/en/baseline/type2/en_baseline_type2_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/pre1/type2/en_pre1_type2_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/pre2/type2/en_pre2_type2_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+
+    <audio controls>
+    <source src="wavs/en/mix/type2/en_mix_type2_1.wav" type="audio/wav">
+    您的浏览器不支持该音频格式。
+    </audio>
+</body>
+
+</html>
